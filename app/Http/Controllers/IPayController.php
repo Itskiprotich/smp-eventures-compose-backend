@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\CommonTrait;
 use App\Models\AccountBalance;
 use App\Models\Customers;
 use App\Models\Mode;
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
 class IPayController extends Controller
 {
 
+    use CommonTrait;
 
     public function responseJson($message, $statusCode, $data, $isSuccess = true)
     {
@@ -226,10 +228,15 @@ class IPayController extends Controller
     // {
     //     return $result = (new TillController)->initiate_stk_payment($phone, $amount);
     // }
-    public function make_payment($phone, $amount)
+    public function make_payment_original($phone, $amount)
     {
         $res = (new KopoController)->initiate_payments($phone, $amount);
         return $res;
+    }
+    public function make_payment($phone, $amount)
+    {
+        $res = (new KopoController)->initiate_payments($phone, $amount);
+        return $this->ipaycallback_kopo("Success",$this->generateRandomString(12),$phone,$phone,$amount,"MPESA Simulation");
     }
     public function make_payment_ipay($phone, $amount)
     {
