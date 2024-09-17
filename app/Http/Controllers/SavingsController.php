@@ -238,7 +238,7 @@ class SavingsController extends Controller
 
             $result = (new IPayController)->make_payment($phone, $amount);
             $data = ([
-                'result' => $result,
+                // 'result' => $result,
                 'proceed' => 0,
                 'message' => 'Payment successfull, Please wait for STK Push'
             ]);
