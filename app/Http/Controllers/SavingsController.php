@@ -876,8 +876,8 @@ class SavingsController extends Controller
             'savings_products.interest_rate',
             'savings_products.admin_fee',
             'savings_products.active',
-            'savings_products.created_at',
-            'savings_products.updated_at'
+            // 'savings_products.created_at',
+            // 'savings_products.updated_at'
         ])
         ->get();
 
