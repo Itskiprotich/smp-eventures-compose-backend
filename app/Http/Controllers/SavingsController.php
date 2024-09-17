@@ -861,8 +861,8 @@ class SavingsController extends Controller
     $products = SavingsProducts::select(
             'savings_products.*',
             DB::raw('IFNULL(SUM(savings.amount), 0) as revenue'),
-            DB::raw('MAX(savings.created_at) as latest_created_at'),
-            DB::raw('MAX(savings.updated_at) as latest_updated_at')
+            DB::raw('MAX(savings.created_at) as created_at'),
+            DB::raw('MAX(savings.updated_at) as updated_at')
         )
         ->leftJoin('savings', 'savings.product', '=', 'savings_products.product_code')
         ->where(['savings.phone' => $id])
