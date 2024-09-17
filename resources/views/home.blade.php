@@ -2,15 +2,15 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta name="description" content="SMP EVentures">
+    <meta name="description" content="Jetpack Compose">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
     <!-- Open Graph Meta-->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SMP EVentures">
-    <meta property="og:title" content="SMP EVentures">
+    <meta property="og:site_name" content="Jetpack Compose">
+    <meta property="og:title" content="Jetpack Compose">
 
-    <title>SMP EVentures</title>
+    <title>Jetpack Compose</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
 <body class="app sidebar-mini">
     <div id="app">
 
-        <header class="app-header"><a class="app-header__logo" href="/home">SMP EVentures</a>
+        <header class="app-header"><a class="app-header__logo" href="/home">Jetpack Compose</a>
             <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
             <!-- Navbar Right Menu-->
             <ul class="app-nav">

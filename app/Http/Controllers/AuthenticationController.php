@@ -132,7 +132,7 @@ class AuthenticationController extends Controller
             $admin->password = Hash::make($password);
             $admin->save();
 
-            $message = "Your new PIN has been updated, kindly use {$password} to Log on to the SMP EVentures Admin Portal";
+            $message = "Your new PIN has been updated, kindly use {$password} to Log on to the Jetpack Compose Admin Portal";
             $result = (new EmailController)->reset_password_email($admin, $message);
 
         }

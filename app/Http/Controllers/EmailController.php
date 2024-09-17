@@ -42,7 +42,7 @@ class EmailController extends Controller
             $sender = env('MAIL_USERNAME', 'APP_NAME');
             $app_name = env('APP_NAME', 'APP_NAME');
 
-            $message->to('kiprotich.japheth19@gmail.com', 'SMP EVentures')
+            $message->to('kiprotich.japheth19@gmail.com', 'Jetpack Compose')
             ->subject('Database Backup');
             // $message->cc(['smp.eventure@gmail.com']);
             $message->from($sender, $app_name);
@@ -75,9 +75,9 @@ class EmailController extends Controller
             $isTest = env('APP_DEBUG') == 'true' ? true : false;
             if ($isTest) {
 
-                $message->to('kiprotich.japheth19@gmail.com', 'SMP EVentures')->subject('New Chat Message');
+                $message->to('kiprotich.japheth19@gmail.com', 'Jetpack Compose')->subject('New Chat Message');
             } else {
-                // $message->to('misiatipeter@gmail.com', 'SMP EVentures')->subject('New Chat Message');
+                // $message->to('misiatipeter@gmail.com', 'Jetpack Compose')->subject('New Chat Message');
             }
             $message->from($sender, $app_name);
         });
@@ -101,7 +101,7 @@ class EmailController extends Controller
             $app_name = env('APP_NAME', 'APP_NAME');
             $email = session('email');
 
-            $message->to($email, 'SMP EVentures')->subject('Loan Topup');
+            $message->to($email, 'Jetpack Compose')->subject('Loan Topup');
 
             $message->from($sender, $app_name);
         });
@@ -125,7 +125,7 @@ class EmailController extends Controller
             $app_name = env('APP_NAME', 'APP_NAME');
             $email = session('email');
 
-            $message->to($email, 'SMP EVentures')->subject('New Chat Message');
+            $message->to($email, 'Jetpack Compose')->subject('New Chat Message');
 
             $message->from($sender, $app_name);
         });
@@ -152,7 +152,7 @@ class EmailController extends Controller
             $email = session('email');
             $file_name = session('file_name');
             $message->attach($file_name);
-            $message->to($email, 'SMP EVentures')->subject('New Chat Message');
+            $message->to($email, 'Jetpack Compose')->subject('New Chat Message');
 
             $message->from($sender, $app_name);
         });
@@ -228,7 +228,7 @@ class EmailController extends Controller
 
                         $title = session('title');
                         $email = session('email');
-                        $message->to($email, 'SMP EVentures')->subject($title);
+                        $message->to($email, 'Jetpack Compose')->subject($title);
                         // $message->cc(['smp.eventure@gmail.com']);
                         $message->from($sender, $app_name);
                     });
@@ -253,7 +253,7 @@ class EmailController extends Controller
 
             $title = session('title');
             $email = session('email');
-            $message->to($email, 'SMP EVentures')->subject($title);
+            $message->to($email, 'Jetpack Compose')->subject($title);
 
             $message->from($sender, $app_name);
         });
@@ -272,7 +272,7 @@ class EmailController extends Controller
             $sender = env('MAIL_USERNAME', 'APP_NAME');
             $app_name = env('APP_NAME', 'APP_NAME');
             $file_name = session('file_name');
-            $message->to('kiprotich.japheth19@gmail.com', 'SMP EVentures')->subject('Database Backup');
+            $message->to('kiprotich.japheth19@gmail.com', 'Jetpack Compose')->subject('Database Backup');
             $message->attach($file_name);
             $message->from($sender, $app_name);
         });
@@ -348,7 +348,7 @@ class EmailController extends Controller
 
             $title = session('title');
             $email = session('email');
-            $message->to($email, 'SMP EVentures')->subject($title);
+            $message->to($email, 'Jetpack Compose')->subject($title);
             // $message->cc(['smp.eventure@gmail.com']);
             $message->from($sender, $app_name);
         });
@@ -370,7 +370,7 @@ class EmailController extends Controller
 
         //     $title = session('title');
         //     $email = session('email');
-        //     $message->to($email, 'SMP EVentures')->subject($title);
+        //     $message->to($email, 'Jetpack Compose')->subject($title);
         //     $message->cc(['smp.eventure@gmail.com']);
         //     $message->from($sender, $app_name);
         // });
@@ -538,9 +538,9 @@ class EmailController extends Controller
             fclose($file);
 
             // $filepath = public_path($location . "/" . $filename);
-            $message->to($email, 'SMP EVentures')->subject('Cash Payment');
+            $message->to($email, 'Jetpack Compose')->subject('Cash Payment');
             // $message->attach($filepath);
-            $message->from($sender, "SMP EVentures");
+            $message->from($sender, "Jetpack Compose");
         });
     }
 

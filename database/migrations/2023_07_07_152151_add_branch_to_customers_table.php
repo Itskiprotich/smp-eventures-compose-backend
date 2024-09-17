@@ -32,8 +32,8 @@ class AddBranchToCustomersTable extends Migration
     {
         Schema::table('customers', function (Blueprint $table) {
             //
-            $table->dropForeign(['branch_id']);
-            $table->dropColumn('branch_id');
+            // $table->dropForeign(['branch_id']);
+            // $table->dropColumn('branch_id');
         });
     }
 }

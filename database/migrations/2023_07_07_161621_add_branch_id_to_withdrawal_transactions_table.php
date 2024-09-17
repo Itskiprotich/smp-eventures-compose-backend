@@ -32,8 +32,8 @@ class AddBranchIdToWithdrawalTransactionsTable extends Migration
     {
         Schema::table('withdrawal_transactions', function (Blueprint $table) {
             //
-            $table->dropForeign(['branch_id']);
-            $table->dropColumn('branch_id');
+            // $table->dropForeign(['branch_id']);
+            // $table->dropColumn('branch_id');
         });
     }
 }

@@ -2,15 +2,15 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta name="description" content="SMP EVentures">
+    <meta name="description" content="Jetpack Compose">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
     <!-- Open Graph Meta-->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SMP EVentures">
-    <meta property="og:title" content="SMP EVentures">
+    <meta property="og:site_name" content="Jetpack Compose">
+    <meta property="og:title" content="Jetpack Compose">
 
-    <title>SMP EVentures</title>
+    <title>Jetpack Compose</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">

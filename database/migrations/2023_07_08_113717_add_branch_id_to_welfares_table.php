@@ -32,8 +32,8 @@ class AddBranchIdToWelfaresTable extends Migration
     {
         Schema::table('welfares', function (Blueprint $table) {
             //
-            $table->dropForeign(['branch_id']);
-            $table->dropColumn('branch_id');
+            // $table->dropForeign(['branch_id']);
+            // $table->dropColumn('branch_id');
         });
     }
 }

@@ -32,8 +32,8 @@ class AddBranchIdToResponsesTable extends Migration
     {
         Schema::table('responses', function (Blueprint $table) {
             //
-            $table->dropForeign(['branch_id']);
-            $table->dropColumn('branch_id');
+            // $table->dropForeign(['branch_id']);
+            // $table->dropColumn('branch_id');
         });
     }
 }

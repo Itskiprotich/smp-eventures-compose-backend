@@ -828,7 +828,7 @@ class HomeController extends Controller
 
                 $customer->online_access = true;
                 $customer->save();
-                $message = "You have been granted access to the online version of SMP App, kindly use {$customer->email} and {$password} to Log on to the SMP EVentures Web App. Access link https://web-smp.imeja.co.ke";
+                $message = "You have been granted access to the online version of SMP App, kindly use {$customer->email} and {$password} to Log on to the Jetpack Compose Web App. Access link https://web-smp.imeja.co.ke";
                 $result = (new EmailController)->online_access_email($customer, $message);
 // return $user;
                 return redirect()->to('/customer/view/' . $id)->with('success', "Online access granted! to {$name}");
@@ -896,7 +896,7 @@ class HomeController extends Controller
 
                     $customer->online_access = true;
                     $customer->save();
-                    $message = "You have been granted access to the online version of SMP App, kindly use {$customer->email} and {$password} to Log on to the SMP EVentures Web App. Access link https://web-smp.imeja.co.ke";
+                    $message = "You have been granted access to the online version of SMP App, kindly use {$customer->email} and {$password} to Log on to the Jetpack Compose Web App. Access link https://web-smp.imeja.co.ke";
                     $result = (new EmailController)->online_access_email($customer, $message);
 
                     // return redirect()->to('settings')->with('success', 'Online access granted!');
@@ -942,7 +942,7 @@ class HomeController extends Controller
             $customer->password = Hash::make($password);
             $customer->save();
 
-            $message = "Your new PIN has been updated, kindly use {$password} to Log on to the SMP EVentures Mobile App";
+            $message = "Your new PIN has been updated, kindly use {$password} to Log on to the Jetpack Compose Mobile App";
             $result = (new EmailController)->reset_password_email($customer, $message);
         }
         return redirect()->to('/customer/edit/' . $customer->id)->with('success', 'Pin Reset Successful!');
@@ -3151,7 +3151,7 @@ class HomeController extends Controller
                 'email' => $attr['email'],
             ]);
         }
-        $message = "Welcome to SMP EVentures. your account login details are Email: {$email} and Password: {$rand}";
+        $message = "Welcome to Jetpack Compose. your account login details are Email: {$email} and Password: {$rand}";
 
         $result = (new EmailController)->new_admin_email($admin, $email, $message);
         return redirect()->to('/admin')->with('success', 'Admin Added successfully');

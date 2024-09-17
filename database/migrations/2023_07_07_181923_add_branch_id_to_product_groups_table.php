@@ -32,8 +32,8 @@ class AddBranchIdToProductGroupsTable extends Migration
     {
         Schema::table('product_groups', function (Blueprint $table) {
             //
-            $table->dropForeign(['branch_id']);
-            $table->dropColumn('branch_id');
+            // $table->dropForeign(['branch_id']);
+            // $table->dropColumn('branch_id');
         });
     }
 }

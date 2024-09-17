@@ -31,9 +31,9 @@ class AddBranchToLoansTable extends Migration
     public function down()
     {
         Schema::table('loans', function (Blueprint $table) {
-            //
-            $table->dropForeign(['branch_id']);
-            $table->dropColumn('branch_id');
+            // //
+            // $table->dropForeign(['branch_id']);
+            // $table->dropColumn('branch_id');
         });
     }
 }

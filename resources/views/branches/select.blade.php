@@ -29,7 +29,7 @@
     </section>
     <section class="lockscreen-content">
         <div class="logo">
-            <h1>SMP EVentures</h1>
+            <h1>Jetpack Compose</h1>
         </div>
         <div class="lock-box"><img class="rounded-circle user-image" src="">
             @if (session()->has('error'))

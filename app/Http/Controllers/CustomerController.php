@@ -865,7 +865,7 @@ class CustomerController extends Controller
                 'message' => 'Password Reset Successfull',
                 'danger' => $password
             ]);
-            $message = "Your new PIN has been updated, kindly use {$password} to Log on to the SMP EVentures Mobile App";
+            $message = "Your new PIN has been updated, kindly use {$password} to Log on to the Jetpack Compose Mobile App";
             $result = (new EmailController)->reset_password_email($customer, $message);
 
             return $this->successResponse("success", $data);

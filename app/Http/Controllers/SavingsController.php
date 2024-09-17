@@ -862,7 +862,7 @@ class SavingsController extends Controller
         $savings =   Savings::join('savings_products', 'savings_products.product_code', '=', 'savings.product')
             ->where(['savings.phone' => $id])
             ->orderBy('savings.created_at', 'desc')
-            ->get(['savings.*', 'savings_products.*', 'savings.created_at as saved']);
+            ->get(['savings.*', 'savings_products.*', 'savings.created_at as saved','savings.id as id']);
         if ($savings) {
             return $this->successResponse("success", $savings);
         } else {
