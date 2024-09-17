@@ -1,0 +1,819 @@
+{
+    "success": true,
+    "status": "retrieved",
+    "message": "data retrieved successfully",
+    "data": {
+        "image": "https://app.rocket-soft.org/store/864/couple-listening-music.jpg",
+        "auth": true,
+        "can": {
+            "view": true
+        },
+        "can_view_error": null,
+        "id": 2003,
+        "status": "active",
+        "label": "Not conducted",
+        "title": "Active Listening: You Can Be a Great Listener",
+        "type": "webinar",
+        "link": "https://app.rocket-soft.org/course/Active-Listening-You-Can-Be-a-Great-Listener",
+        "access_days": null,
+        "live_webinar_status": "not_conducted",
+        "auth_has_bought": false,
+        "sales": {
+            "count": 3,
+            "amount": 120
+        },
+        "is_favorite": false,
+        "price_string": "$40",
+        "best_ticket_string": "$30",
+        "price": 40,
+        "tax": 0,
+        "tax_with_discount": 0,
+        "best_ticket_price": 30,
+        "discount_percent": 25,
+        "course_page_tax": 0,
+        "price_with_discount": 40,
+        "discount_amount": 10,
+        "active_special_offer": null,
+        "duration": 75,
+        "teacher": {
+            "id": 3,
+            "full_name": "James Kong",
+            "role_name": "teacher",
+            "bio": "Master Certified Coach",
+            "offline": 1,
+            "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+            "verified": 0,
+            "rate": "3.88",
+            "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+            "meeting_status": "unavailable",
+            "user_group": {
+                "id": 2,
+                "name": "Vip Instructors",
+                "status": "active",
+                "commission": 10,
+                "discount": 20
+            },
+            "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+        },
+        "students_count": 3,
+        "rate": "5.00",
+        "rate_type": {
+            "content_quality": 5,
+            "instructor_skills": 5,
+            "purchase_worth": 5,
+            "support_quality": 5
+        },
+        "created_at": 1625299225,
+        "start_date": 1696105800,
+        "purchased_at": null,
+        "reviews_count": 1,
+        "points": null,
+        "progress": 10,
+        "progress_percent": 30,
+        "category": "Communications",
+        "capacity": 10,
+        "support": true,
+        "subscribe": false,
+        "description": "<p>Most of us want to get better at talking. But the REAL power tool for influencing others, leading, collaborating, having an impact, and being an an-all-around-better person is Active Listening. While regular listening can look like being blank and silent, Active Listening is engaged, creative, and responsive.</p><p><br></p><p>In this course, you will gain both the internal awareness and external skill-set that are the foundation of Active Listening. You will be able to have far more satisfying, interesting, successful conversations.</p><p><br></p><p>I created this practical\u00a0 Udemy course for you--filled with my unique insights from starting out as a terrible listener to now being a professional listener, a Master Certified Coach. I\u2019ve been teaching people how to listen actively for twenty years now and these skills are both learnable and priceless. My course is packed with real-world examples that demystify and simplify what to pay attention to so you can be a great listener.</p>",
+        "prerequisites": [
+            {
+                "required": 0,
+                "webinar": {
+                    "image": "https://app.rocket-soft.org/store/1016/1.jpg",
+                    "auth": true,
+                    "can": {
+                        "view": true
+                    },
+                    "can_view_error": null,
+                    "id": 1995,
+                    "status": "active",
+                    "label": "Course",
+                    "title": "Become a Product Manager",
+                    "type": "course",
+                    "link": "https://app.rocket-soft.org/course/Become-a-Product-Manager",
+                    "access_days": null,
+                    "live_webinar_status": null,
+                    "auth_has_bought": false,
+                    "sales": {
+                        "count": 4,
+                        "amount": 0
+                    },
+                    "is_favorite": false,
+                    "price_string": null,
+                    "best_ticket_string": null,
+                    "price": 0,
+                    "tax": 0,
+                    "tax_with_discount": 0,
+                    "best_ticket_price": 0,
+                    "discount_percent": 0,
+                    "course_page_tax": 0,
+                    "price_with_discount": 0,
+                    "discount_amount": 0,
+                    "active_special_offer": null,
+                    "duration": 150,
+                    "teacher": {
+                        "id": 1016,
+                        "full_name": "Ricardo dave",
+                        "role_name": "teacher",
+                        "bio": "Data Analyst at Microsoft",
+                        "offline": 1,
+                        "offline_message": "I am not available for 2 days due to a business trip",
+                        "verified": 0,
+                        "rate": "4.58",
+                        "avatar": "https://app.rocket-soft.org/store/1016/avatar/617a4f17c8e72.png",
+                        "meeting_status": "available",
+                        "user_group": {
+                            "id": 2,
+                            "name": "Vip Instructors",
+                            "status": "active",
+                            "commission": 10,
+                            "discount": 20
+                        },
+                        "address": "Luib, 72 Wern Ddu Lane"
+                    },
+                    "students_count": 4,
+                    "rate": "4.58",
+                    "rate_type": {
+                        "content_quality": 4.3,
+                        "instructor_skills": 4.7,
+                        "purchase_worth": 4.7,
+                        "support_quality": 4.7
+                    },
+                    "created_at": 1624867858,
+                    "start_date": null,
+                    "purchased_at": null,
+                    "reviews_count": 3,
+                    "points": null,
+                    "progress": null,
+                    "progress_percent": 0,
+                    "category": "Business Strategy",
+                    "capacity": null
+                }
+            }
+        ],
+        "faqs": [
+            {
+                "id": 29,
+                "title": "How can I get course updates?",
+                "answer": "You will receive a notification after each update is released so you can download updated files from the course page.",
+                "order": null,
+                "created_at": 1625300294,
+                "updated_at": null
+            },
+            {
+                "id": 30,
+                "title": "Can I have a private meeting with the instructor?",
+                "answer": "Yes, you can reserve a 1 to 1 meeting with the instructor using the instructor profile.",
+                "order": null,
+                "created_at": 1625300305,
+                "updated_at": null
+            },
+            {
+                "id": 31,
+                "title": "Is it a supported course?",
+                "answer": "Yes, you can get in touch with the instructor using the support system.",
+                "order": null,
+                "created_at": 1625300320,
+                "updated_at": null
+            }
+        ],
+        "comments": [
+            {
+                "id": 63,
+                "status": "active",
+                "comment_user_type": "student",
+                "create_at": 1626509327,
+                "comment": "As i already new a lot on this matter i was surprised that i actually find out that there are more ways to tweak your time management",
+                "blog": null,
+                "user": {
+                    "id": 996,
+                    "full_name": "Robert B. Gray",
+                    "role_name": "user",
+                    "bio": "bio",
+                    "offline": 0,
+                    "offline_message": null,
+                    "verified": 0,
+                    "rate": 0,
+                    "avatar": "https://app.rocket-soft.org/store/996/avatar/617a4ea0d77af.png",
+                    "meeting_status": "no",
+                    "user_group": {
+                        "id": 3,
+                        "name": "Special Students",
+                        "status": "active",
+                        "commission": null,
+                        "discount": 10
+                    },
+                    "address": null
+                },
+                "webinar": {
+                    "image": "https://app.rocket-soft.org/store/864/couple-listening-music.jpg",
+                    "auth": true,
+                    "can": {
+                        "view": true
+                    },
+                    "can_view_error": null,
+                    "id": 2003,
+                    "status": "active",
+                    "label": "Not conducted",
+                    "title": "Active Listening: You Can Be a Great Listener",
+                    "type": "webinar",
+                    "link": "https://app.rocket-soft.org/course/Active-Listening-You-Can-Be-a-Great-Listener",
+                    "access_days": null,
+                    "live_webinar_status": "not_conducted",
+                    "auth_has_bought": false,
+                    "sales": {
+                        "count": 3,
+                        "amount": 120
+                    },
+                    "is_favorite": false,
+                    "price_string": "$40",
+                    "best_ticket_string": "$30",
+                    "price": 40,
+                    "tax": 0,
+                    "tax_with_discount": 0,
+                    "best_ticket_price": 30,
+                    "discount_percent": 25,
+                    "course_page_tax": 0,
+                    "price_with_discount": 40,
+                    "discount_amount": 10,
+                    "active_special_offer": null,
+                    "duration": 75,
+                    "teacher": {
+                        "id": 3,
+                        "full_name": "James Kong",
+                        "role_name": "teacher",
+                        "bio": "Master Certified Coach",
+                        "offline": 1,
+                        "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+                        "verified": 0,
+                        "rate": "3.88",
+                        "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+                        "meeting_status": "unavailable",
+                        "user_group": {
+                            "id": 2,
+                            "name": "Vip Instructors",
+                            "status": "active",
+                            "commission": 10,
+                            "discount": 20
+                        },
+                        "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+                    },
+                    "students_count": 3,
+                    "rate": "5.00",
+                    "rate_type": {
+                        "content_quality": 5,
+                        "instructor_skills": 5,
+                        "purchase_worth": 5,
+                        "support_quality": 5
+                    },
+                    "created_at": 1625299225,
+                    "start_date": 1696105800,
+                    "purchased_at": null,
+                    "reviews_count": 1,
+                    "points": null,
+                    "progress": 10,
+                    "progress_percent": 30,
+                    "category": "Communications",
+                    "capacity": 10
+                },
+                "product": null,
+                "replies": []
+            },
+            {
+                "id": 56,
+                "status": "active",
+                "comment_user_type": "student",
+                "create_at": 1626241386,
+                "comment": "Hi.\r\nIs it possible to start the class earlier?",
+                "blog": null,
+                "user": {
+                    "id": 929,
+                    "full_name": "Kate Williams",
+                    "role_name": "teacher",
+                    "bio": "Computer Engineer at Oracle",
+                    "offline": 0,
+                    "offline_message": null,
+                    "verified": 0,
+                    "rate": "3.42",
+                    "avatar": "https://app.rocket-soft.org/store/929/avatar/617a4f5d834c8.png",
+                    "meeting_status": "available",
+                    "user_group": null,
+                    "address": null
+                },
+                "webinar": {
+                    "image": "https://app.rocket-soft.org/store/864/couple-listening-music.jpg",
+                    "auth": true,
+                    "can": {
+                        "view": true
+                    },
+                    "can_view_error": null,
+                    "id": 2003,
+                    "status": "active",
+                    "label": "Not conducted",
+                    "title": "Active Listening: You Can Be a Great Listener",
+                    "type": "webinar",
+                    "link": "https://app.rocket-soft.org/course/Active-Listening-You-Can-Be-a-Great-Listener",
+                    "access_days": null,
+                    "live_webinar_status": "not_conducted",
+                    "auth_has_bought": false,
+                    "sales": {
+                        "count": 3,
+                        "amount": 120
+                    },
+                    "is_favorite": false,
+                    "price_string": "$40",
+                    "best_ticket_string": "$30",
+                    "price": 40,
+                    "tax": 0,
+                    "tax_with_discount": 0,
+                    "best_ticket_price": 30,
+                    "discount_percent": 25,
+                    "course_page_tax": 0,
+                    "price_with_discount": 40,
+                    "discount_amount": 10,
+                    "active_special_offer": null,
+                    "duration": 75,
+                    "teacher": {
+                        "id": 3,
+                        "full_name": "James Kong",
+                        "role_name": "teacher",
+                        "bio": "Master Certified Coach",
+                        "offline": 1,
+                        "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+                        "verified": 0,
+                        "rate": "3.88",
+                        "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+                        "meeting_status": "unavailable",
+                        "user_group": {
+                            "id": 2,
+                            "name": "Vip Instructors",
+                            "status": "active",
+                            "commission": 10,
+                            "discount": 20
+                        },
+                        "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+                    },
+                    "students_count": 3,
+                    "rate": "5.00",
+                    "rate_type": {
+                        "content_quality": 5,
+                        "instructor_skills": 5,
+                        "purchase_worth": 5,
+                        "support_quality": 5
+                    },
+                    "created_at": 1625299225,
+                    "start_date": 1696105800,
+                    "purchased_at": null,
+                    "reviews_count": 1,
+                    "points": null,
+                    "progress": 10,
+                    "progress_percent": 30,
+                    "category": "Communications",
+                    "capacity": 10
+                },
+                "product": null,
+                "replies": [
+                    {
+                        "id": 58,
+                        "comment_user_type": "student",
+                        "user": {
+                            "id": 3,
+                            "full_name": "James Kong",
+                            "role_name": "teacher",
+                            "bio": "Master Certified Coach",
+                            "offline": 1,
+                            "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+                            "verified": 0,
+                            "rate": "3.88",
+                            "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+                            "meeting_status": "unavailable",
+                            "user_group": {
+                                "id": 2,
+                                "name": "Vip Instructors",
+                                "status": "active",
+                                "commission": 10,
+                                "discount": 20
+                            },
+                            "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+                        },
+                        "create_at": 1626242070,
+                        "comment": "Hi kate.\r\nNo, but it may change in the future. Thank you"
+                    }
+                ]
+            }
+        ],
+        "session_chapters": [
+            {
+                "id": 13,
+                "title": "Why Active Listening?",
+                "topics_count": 3,
+                "duration": "1: 15",
+                "status": "active",
+                "order": null,
+                "type": null,
+                "created_at": 1635416784,
+                "textLessons": [],
+                "sessions": [
+                    {
+                        "id": 71,
+                        "title": "Why Active Listening?",
+                        "auth_has_read": false,
+                        "user_has_access": false,
+                        "is_finished": false,
+                        "is_started": false,
+                        "status": "active",
+                        "order": null,
+                        "moderator_secret": "",
+                        "date": 1696505400,
+                        "duration": 20,
+                        "link": "https://meet.google.com/",
+                        "join_link": "https://meet.google.com/",
+                        "can_join": false,
+                        "session_api": "local",
+                        "zoom_start_link": null,
+                        "api_secret": "368967886",
+                        "description": "Most of us want to get better at talking. But the REAL power tool for influencing others, leading, collaborating, having an impact, and being an an-all-around-better person is Active Listening. While regular listening can look like being blank and silent, Active Listening is engaged, creative, and responsive.",
+                        "created_at": 1625299964,
+                        "updated_at": 1635416803,
+                        "agora_settings ": null
+                    },
+                    {
+                        "id": 72,
+                        "title": "Automatic Listening Habits",
+                        "auth_has_read": false,
+                        "user_has_access": false,
+                        "is_finished": false,
+                        "is_started": false,
+                        "status": "active",
+                        "order": null,
+                        "moderator_secret": "",
+                        "date": 1696915800,
+                        "duration": 20,
+                        "link": "https://meet.google.com/",
+                        "join_link": "https://meet.google.com/",
+                        "can_join": false,
+                        "session_api": "local",
+                        "zoom_start_link": null,
+                        "api_secret": "55475666",
+                        "description": "In this course, you will gain both the internal awareness and external skill-set that are the foundation of Active Listening. You will be able to have far more satisfying, interesting, successful conversations.",
+                        "created_at": 1625300053,
+                        "updated_at": 1635416824,
+                        "agora_settings ": null
+                    },
+                    {
+                        "id": 73,
+                        "title": "Helpful Habits",
+                        "auth_has_read": false,
+                        "user_has_access": false,
+                        "is_finished": false,
+                        "is_started": false,
+                        "status": "active",
+                        "order": null,
+                        "moderator_secret": "",
+                        "date": 1697319000,
+                        "duration": 35,
+                        "link": "https://meet.google.com/",
+                        "join_link": "https://meet.google.com/",
+                        "can_join": false,
+                        "session_api": "local",
+                        "zoom_start_link": null,
+                        "api_secret": "RW346@654",
+                        "description": "Most of us want to get better at talking. But the REAL power tool for influencing others, leading, collaborating, having an impact, and being an an-all-around-better person is Active Listening.",
+                        "created_at": 1625300165,
+                        "updated_at": 1635416835,
+                        "agora_settings ": null
+                    }
+                ],
+                "files": [],
+                "quizzes": []
+            }
+        ],
+        "sessions_without_chapter": [],
+        "sessions_count": 3,
+        "files_chapters": [
+            {
+                "id": 12,
+                "title": "Introduction",
+                "topics_count": 1,
+                "duration": "0: 00",
+                "status": "active",
+                "order": null,
+                "type": null,
+                "created_at": 1635416675,
+                "textLessons": [],
+                "sessions": [],
+                "files": [
+                    {
+                        "id": 45,
+                        "title": "Introduction",
+                        "auth_has_read": false,
+                        "status": "active",
+                        "order": null,
+                        "downloadable": 1,
+                        "accessibility": "free",
+                        "description": "Improve your reactive habits, define your listening mindset, amplify your curiosity, & add value as a great listener",
+                        "storage": "upload",
+                        "download_link": "https://app.rocket-soft.org/course/Active-Listening-You-Can-Be-a-Great-Listener/file/45/download",
+                        "auth_has_access": true,
+                        "user_has_access": true,
+                        "file": "https://app.rocket-soft.org/store/864/Active Listening- You Can Be a Great Listener.mkv",
+                        "volume": "3.78 MB",
+                        "file_type": "mkv",
+                        "is_video": true,
+                        "interactive_type": null,
+                        "interactive_file_name": null,
+                        "interactive_file_path": null,
+                        "created_at": 1625300200,
+                        "updated_at": 1635416686
+                    }
+                ],
+                "quizzes": []
+            }
+        ],
+        "files_without_chapter": [],
+        "files_count": 1,
+        "text_lesson_chapters": [],
+        "text_lessons_without_chapter": [],
+        "text_lessons_count": 0,
+        "quizzes": [
+            {
+                "id": 32,
+                "title": "Midterm Quiz",
+                "time": 10,
+                "auth_status": "not_participated",
+                "question_count": 5,
+                "total_mark": 100,
+                "pass_mark": 60,
+                "average_grade": 0,
+                "student_count": 0,
+                "certificates_count": 0,
+                "success_rate": 0,
+                "status": "active",
+                "attempt": 3,
+                "created_at": 1625950930,
+                "certificate": 1,
+                "teacher": {
+                    "id": 3,
+                    "full_name": "James Kong",
+                    "role_name": "teacher",
+                    "bio": "Master Certified Coach",
+                    "offline": 1,
+                    "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+                    "verified": 0,
+                    "rate": "3.88",
+                    "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+                    "meeting_status": "unavailable",
+                    "user_group": {
+                        "id": 2,
+                        "name": "Vip Instructors",
+                        "status": "active",
+                        "commission": 10,
+                        "discount": 20
+                    },
+                    "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+                },
+                "auth_attempt_count": 0,
+                "attempt_state": "0/3",
+                "auth_can_start": false,
+                "webinar": {
+                    "image": "https://app.rocket-soft.org/store/864/couple-listening-music.jpg",
+                    "auth": true,
+                    "can": {
+                        "view": true
+                    },
+                    "can_view_error": null,
+                    "id": 2003,
+                    "status": "active",
+                    "label": "Not conducted",
+                    "title": "Active Listening: You Can Be a Great Listener",
+                    "type": "webinar",
+                    "link": "https://app.rocket-soft.org/course/Active-Listening-You-Can-Be-a-Great-Listener",
+                    "access_days": null,
+                    "live_webinar_status": "not_conducted",
+                    "auth_has_bought": false,
+                    "sales": {
+                        "count": 3,
+                        "amount": 120
+                    },
+                    "is_favorite": false,
+                    "price_string": "$40",
+                    "best_ticket_string": "$30",
+                    "price": 40,
+                    "tax": 0,
+                    "tax_with_discount": 0,
+                    "best_ticket_price": 30,
+                    "discount_percent": 25,
+                    "course_page_tax": 0,
+                    "price_with_discount": 40,
+                    "discount_amount": 10,
+                    "active_special_offer": null,
+                    "duration": 75,
+                    "teacher": {
+                        "id": 3,
+                        "full_name": "James Kong",
+                        "role_name": "teacher",
+                        "bio": "Master Certified Coach",
+                        "offline": 1,
+                        "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+                        "verified": 0,
+                        "rate": "3.88",
+                        "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+                        "meeting_status": "unavailable",
+                        "user_group": {
+                            "id": 2,
+                            "name": "Vip Instructors",
+                            "status": "active",
+                            "commission": 10,
+                            "discount": 20
+                        },
+                        "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+                    },
+                    "students_count": 3,
+                    "rate": "5.00",
+                    "rate_type": {
+                        "content_quality": 5,
+                        "instructor_skills": 5,
+                        "purchase_worth": 5,
+                        "support_quality": 5
+                    },
+                    "created_at": 1625299225,
+                    "start_date": 1696105800,
+                    "purchased_at": null,
+                    "reviews_count": 1,
+                    "points": null,
+                    "progress": 10,
+                    "progress_percent": 30,
+                    "category": "Communications",
+                    "capacity": 10
+                }
+            }
+        ],
+        "quizzes_count": 1,
+        "certificate": [
+            {
+                "id": 32,
+                "title": "Midterm Quiz",
+                "time": 10,
+                "auth_status": "not_participated",
+                "question_count": 5,
+                "total_mark": 100,
+                "pass_mark": 60,
+                "average_grade": 0,
+                "student_count": 0,
+                "certificates_count": 0,
+                "success_rate": 0,
+                "status": "active",
+                "attempt": 3,
+                "created_at": 1625950930,
+                "certificate": 1,
+                "teacher": {
+                    "id": 3,
+                    "full_name": "James Kong",
+                    "role_name": "teacher",
+                    "bio": "Master Certified Coach",
+                    "offline": 1,
+                    "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+                    "verified": 0,
+                    "rate": "3.88",
+                    "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+                    "meeting_status": "unavailable",
+                    "user_group": {
+                        "id": 2,
+                        "name": "Vip Instructors",
+                        "status": "active",
+                        "commission": 10,
+                        "discount": 20
+                    },
+                    "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+                },
+                "auth_attempt_count": 0,
+                "attempt_state": "0/3",
+                "auth_can_start": false,
+                "webinar": {
+                    "image": "https://app.rocket-soft.org/store/864/couple-listening-music.jpg",
+                    "auth": true,
+                    "can": {
+                        "view": true
+                    },
+                    "can_view_error": null,
+                    "id": 2003,
+                    "status": "active",
+                    "label": "Not conducted",
+                    "title": "Active Listening: You Can Be a Great Listener",
+                    "type": "webinar",
+                    "link": "https://app.rocket-soft.org/course/Active-Listening-You-Can-Be-a-Great-Listener",
+                    "access_days": null,
+                    "live_webinar_status": "not_conducted",
+                    "auth_has_bought": false,
+                    "sales": {
+                        "count": 3,
+                        "amount": 120
+                    },
+                    "is_favorite": false,
+                    "price_string": "$40",
+                    "best_ticket_string": "$30",
+                    "price": 40,
+                    "tax": 0,
+                    "tax_with_discount": 0,
+                    "best_ticket_price": 30,
+                    "discount_percent": 25,
+                    "course_page_tax": 0,
+                    "price_with_discount": 40,
+                    "discount_amount": 10,
+                    "active_special_offer": null,
+                    "duration": 75,
+                    "teacher": {
+                        "id": 3,
+                        "full_name": "James Kong",
+                        "role_name": "teacher",
+                        "bio": "Master Certified Coach",
+                        "offline": 1,
+                        "offline_message": "I will not be available for 2 weeks until  end of January due to a business trip.",
+                        "verified": 0,
+                        "rate": "3.88",
+                        "avatar": "https://app.rocket-soft.org/store/3/avatar/617a4fad7845b.png",
+                        "meeting_status": "unavailable",
+                        "user_group": {
+                            "id": 2,
+                            "name": "Vip Instructors",
+                            "status": "active",
+                            "commission": 10,
+                            "discount": 20
+                        },
+                        "address": "638153, Tamil Nadu, Modakkurichi, Elumathur"
+                    },
+                    "students_count": 3,
+                    "rate": "5.00",
+                    "rate_type": {
+                        "content_quality": 5,
+                        "instructor_skills": 5,
+                        "purchase_worth": 5,
+                        "support_quality": 5
+                    },
+                    "created_at": 1625299225,
+                    "start_date": 1696105800,
+                    "purchased_at": null,
+                    "reviews_count": 1,
+                    "points": null,
+                    "progress": 10,
+                    "progress_percent": 30,
+                    "category": "Communications",
+                    "capacity": 10
+                }
+            }
+        ],
+        "auth_certificates": [],
+        "reviews": [
+            {
+                "id": 39,
+                "auth": false,
+                "user": {
+                    "full_name": "Robert B. Gray",
+                    "avatar": "https://app.rocket-soft.org/store/996/avatar/617a4ea0d77af.png"
+                },
+                "created_at": 1656130561,
+                "description": "It was a perfect course.\r\nI recommend it to everyone.",
+                "rate": "5",
+                "rate_type": {
+                    "content_quality": 5,
+                    "instructor_skills": 5,
+                    "purchase_worth": 5,
+                    "support_quality": 5
+                },
+                "replies": []
+            }
+        ],
+        "video_demo": "https://app.rocket-soft.org/store/864/Active Listening- You Can Be a Great Listener.mkv",
+        "video_demo_source": null,
+        "image_cover": "https://app.rocket-soft.org/store/864/Active Listening You Can Be a Great Listener_c.png",
+        "tickets": [
+            {
+                "id": 31,
+                "title": "First Price Plan",
+                "sub_title": "For first 5 students until 31 July 2023",
+                "discount": 25,
+                "price_with_ticket_discount": 30,
+                "is_valid": true
+            }
+        ],
+        "isDownloadable": true,
+        "teacher_is_offline": true,
+        "tags": [
+            {
+                "id": 6452,
+                "title": "Listening"
+            },
+            {
+                "id": 6453,
+                "title": "Listen"
+            },
+            {
+                "id": 6454,
+                "title": "Listener"
+            }
+        ],
+        "auth_has_subscription": false,
+        "can_add_to_cart": "ok",
+        "can_buy_with_points": false
+    }
+}

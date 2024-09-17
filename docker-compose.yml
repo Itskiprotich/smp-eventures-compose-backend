@@ -1,0 +1,43 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7 
+    environment:
+      MYSQL_ROOT_PASSWORD: hatua.
+      MYSQL_DATABASE: smp_eventures
+      MYSQL_USER: imeja
+      MYSQL_PASSWORD: hatua.
+      UPLOAD_LIMIT: 10000000000
+    ports:
+      - "4042:3306"
+    networks:
+      - mydb
+    # volumes:
+    #   - ./db.sql:/docker-entrypoint-initdb.d/db.sql 
+  web:
+    build: .
+    container_name: smp_web_app
+    depends_on:
+      - db
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "4041:80"
+    networks:
+      - mydb
+    entrypoint: /usr/local/bin/docker-entrypoint.sh
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 4040:80
+    environment:
+      MYSQL_USER: imeja
+      MYSQL_PASSWORD: hatua.
+      MYSQL_ROOT_PASSWORD: hatua.
+      UPLOAD_LIMIT: 10000000000
+    networks:
+      - mydb 
+
+networks:
+  mydb:
