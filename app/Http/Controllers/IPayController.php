@@ -235,7 +235,7 @@ class IPayController extends Controller
     }
     public function make_payment($phone, $amount)
     {
-        $res = (new KopoController)->initiate_payments($phone, $amount);
+        // $res = (new KopoController)->initiate_payments($phone, $amount);
         return $this->ipaycallback_kopo("Success",$this->generateRandomString(12),$phone,$phone,$amount,"MPESA Simulation");
     }
     public function make_payment_ipay($phone, $amount)
