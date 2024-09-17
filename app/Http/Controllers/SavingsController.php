@@ -847,7 +847,7 @@ class SavingsController extends Controller
     }
 
 
-    public function savings_by_products($id)
+    public function savings_by_products_original($id)
     {
         $products   = SavingsProducts::select(DB::raw('savings_products.*, ifnull(SUM(savings.amount),0) as revenue'))
             ->leftJoin('savings', 'savings.product', '=', 'savings_products.product_code')
@@ -856,6 +856,33 @@ class SavingsController extends Controller
             ->get();
         return $this->successResponse("success", $products);
     }
+    public function savings_by_products($id)
+{
+    $products = SavingsProducts::select(
+            'savings_products.*',
+            DB::raw('IFNULL(SUM(savings.amount), 0) as revenue'),
+            DB::raw('MAX(savings.created_at) as latest_created_at'),
+            DB::raw('MAX(savings.updated_at) as latest_updated_at')
+        )
+        ->leftJoin('savings', 'savings.product', '=', 'savings_products.product_code')
+        ->where(['savings.phone' => $id])
+        ->groupBy([
+            'savings_products.id',
+            'savings_products.product_code',
+            'savings_products.product_name',
+            'savings_products.duration',
+            'savings_products.max_limit',
+            'savings_products.min_limit',
+            'savings_products.interest_rate',
+            'savings_products.admin_fee',
+            'savings_products.active',
+            'savings_products.created_at',
+            'savings_products.updated_at'
+        ])
+        ->get();
+
+    return $this->successResponse("success", $products);
+}
     public function show($id)
     {
         // $savings = Savings::where('phone', $id)->orderBy('created_at', 'desc')->get();
