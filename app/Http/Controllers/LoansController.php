@@ -1144,13 +1144,11 @@ class LoansController extends Controller
             return $this->errorResponse("No Such Loan Record");
         }
     }
-    public function viewLoans(Request $request)
+    public function viewLoans(Request $request,$phone)
     {
-        $attr = $request->validate([
-            'phone' => 'required|string|max:255',
-        ]);
+         
         $status = ['pending', 'disbursed', 'paid'];
-        $loans = Loans::where(['phone' => $attr['phone'],])
+        $loans = Loans::where(['phone' => $phone])
             ->whereIn('loan_status', $status)
             ->get();
         if ($loans) {
