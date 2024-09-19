@@ -14,15 +14,15 @@ class WithdrawalTransaction extends Model
         'trans_id',
         'amount','branch_id'
     ];
-      // Custom accessor for created_at in a specific format
-      public function getCreatedAtFormattedAttribute()
-      {
-          return $this->created_at->format('Y-m-d H:i:s'); // Adjust format as needed
-      }
-  
-      // Custom accessor for updated_at in a specific format
-      public function getUpdatedAtFormattedAttribute()
-      {
-          return $this->updated_at->format('Y-m-d H:i:s'); // Adjust format as needed
-      }
+   //return human readable date for created_at
+   public function getCreatedAtAttribute($value)
+   {
+       return date('d-m-Y H:m:i', strtotime($value));
+   }
+
+   //return human readable date for updated_at
+   public function getUpdatedAtAttribute($value)
+   {
+       return date('d-m-Y H:m:i', strtotime($value));
+   }
 }
