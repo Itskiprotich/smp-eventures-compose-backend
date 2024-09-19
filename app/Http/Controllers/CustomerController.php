@@ -618,6 +618,17 @@ class CustomerController extends Controller
 
         $message = "";
         $borrow = "0";
+
+        if ($customer->blacklist) {
+            $message = "Invalid Phone Number, please try again";
+            $borrow = "1";
+            $data = ([
+                'message' => $message,
+                'borrow' => $borrow,
+            ]);
+            return $this->successResponse("success", $data);
+        }
+
         if ($customer->blacklist) {
             $message = "Your credit profile is too low. please contact the administrator ";
             $borrow = "1";
