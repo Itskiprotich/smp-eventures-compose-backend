@@ -150,7 +150,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
 
     Route::prefix('/customer')->group(function () {
-        Route::post('/qualification/{id}', [CustomerController::class, 'show']);
+        Route::get('/qualification/{id}', [CustomerController::class, 'show']);
         Route::post('/web/qualification/{id}', [CustomerController::class, 'show_web']);
         Route::get('/view/{id}', [CustomerController::class, 'view']);
         Route::get('/logs/{id}', [CustomerController::class, 'logs']);
