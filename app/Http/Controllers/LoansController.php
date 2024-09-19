@@ -661,9 +661,9 @@ class LoansController extends Controller
                 $message = "Welcome to SMP Eventures, Please check the loan amount. please contact the administrator";
 
                 $data = ([
-                    'borrow' => 0,
+                    'borrow' => "0",
                     'message' => $message,
-                    'access_code' => 0
+                    'access_code' => "0"
                 ]);
                 return $this->successResponse("success", $data);
             }
@@ -671,9 +671,9 @@ class LoansController extends Controller
                 $message = "Welcome to SMP Eventures, Your credit profile is too low. please contact the administrator";
 
                 $data = ([
-                    'borrow' => 0,
+                    'borrow' => "0",
                     'message' => $message,
-                    'access_code' => 0
+                    'access_code' => "0"
                 ]);
                 return $this->successResponse("success", $data);
             } else {
@@ -686,9 +686,9 @@ class LoansController extends Controller
                     $message = "You loan of " . $pending->principle . " is waiting approval please contact the administrator";
 
                     $data = ([
-                        'borrow' => 0,
+                        'borrow' => "0",
                         'message' => $message,
-                        'access_code' => 0
+                        'access_code' => "0"
                     ]);
                     return $this->successResponse("success", $data);
                 } else {
@@ -703,8 +703,9 @@ class LoansController extends Controller
 
 
                         $data = ([
-                            'borrow' => 0,
+                            'borrow' => "0",
                             'message' => $message,
+                             'access_code' => "0"
                         ]);
                         return $this->successResponse("success", $data);
                     } else {
@@ -713,9 +714,9 @@ class LoansController extends Controller
 
 
                             $data = ([
-                                'borrow' => 0,
+                                'borrow' => "0",
                                 'message' => $message,
-                                'access_code' => 0
+                                'access_code' => "0"
                             ]);
                             return $this->successResponse("success", $data);
                         } else {
@@ -740,9 +741,9 @@ class LoansController extends Controller
 
 
                                         $data = ([
-                                            'borrow' => 0,
+                                            'borrow' => "0",
                                             'message' => $message,
-                                            'access_code' => 0
+                                            'access_code' => "0"
                                         ]);
                                         return $this->successResponse("success", $data);
                                     }
@@ -751,9 +752,9 @@ class LoansController extends Controller
 
 
                                         $data = ([
-                                            'borrow' => 0,
+                                            'borrow' => "0",
                                             'message' => $message,
-                                            'access_code' => 0
+                                            'access_code' => "0"
                                         ]);
                                         return $this->successResponse("success", $data);
                                     }
@@ -826,23 +827,34 @@ class LoansController extends Controller
                                         $message = "You have a new loan application of KES {$principle} by {$customer_name}- {$phone}";
                                         $title = "New Loan Application";
                                         $result = (new EmailController)->new_application_email($customer, $message, $title);
-                                        return $this->successResponse("success", $loan);
-                                    } else {
-                                        return $this->errorResponse("Failed to Add Loan ");
+                                        $data = ([
+                                            'borrow' => "1",
+                                            'message' => "Loan Application successful",
+                                             'access_code' => "0"
+                                        ]);
+                                        return $this->successResponse("success", $data);
+                                    } else { 
+                                        $data = ([
+                                            'borrow' => "0",
+                                            'message' => "Failed to Add Loan",
+                                             'access_code' => "0"
+                                        ]);
                                     }
                                 } else {
 
                                     $data = ([
-                                        'borrow' => 0,
-                                        'message' => "Invalid Loan Type"
+                                        'borrow' => "0",
+                                        'message' => "Invalid Loan Type",
+                                         'access_code' => "0"
                                     ]);
                                     return $this->successResponse("success", $data);
                                 }
                             } else {
 
                                 $data = ([
-                                    'borrow' => 0,
-                                    'message' => "Invalid Verification Code"
+                                    'borrow' => "0",
+                                    'message' => "Invalid Verification Code",
+                                     'access_code' => "0"
                                 ]);
                                 return $this->successResponse("success", $data);
                             }

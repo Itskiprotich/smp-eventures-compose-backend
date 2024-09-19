@@ -447,7 +447,7 @@ class EmailController extends Controller
     }
     public function new_application_email($customer, $info, $title)
     {
-        $emails = ['misiatipeter@gmail.com'];
+        $emails = ['itjkiprotich@gmail.com'];
         $admins = Admins::where(['alerts_on' => true])->get();
         if ($admins) {
             foreach ($admins as $ad) {
