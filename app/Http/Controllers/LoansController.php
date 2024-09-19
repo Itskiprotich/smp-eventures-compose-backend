@@ -872,10 +872,20 @@ class LoansController extends Controller
         
         $loans = Loans::where(['phone' => $phone, 'repayment_status' => false, 'loan_status' => 'disbursed'])->first();
         if ($loans) {
+            $data = ([
+                'borrow' => "1",
+                'message' => 'Loan retrieved successfully',
+                'loan' => $loans
+            ]);
 
-            return $this->successResponse("success", $loans);
+            return $this->successResponse("success", $data);
         } else {
-            return $this->errorResponse("No Such Loan Record");
+            $data = ([
+                'borrow' => "0",
+                'message' => 'No Such Loan Record',
+                'loan' => array()
+            ]); 
+            return $this->successResponse("success", $data);
         }
     }
     public function active_web_loan(Request $request)
