@@ -883,7 +883,7 @@ class LoansController extends Controller
             $data = ([
                 'borrow' => "0",
                 'message' => 'No Such Loan Record',
-                'loan' => array()
+                'loan' => $loans
             ]); 
             return $this->successResponse("success", $data);
         }
