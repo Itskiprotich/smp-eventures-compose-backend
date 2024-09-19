@@ -619,7 +619,7 @@ class CustomerController extends Controller
         $message = "";
         $borrow = "0";
 
-        if ($customer->blacklist) {
+        if (!$customer) {
             $message = "Invalid Phone Number, please try again";
             $borrow = "1";
             $data = ([
