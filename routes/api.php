@@ -166,7 +166,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::prefix('/loans')->group(function () {
         Route::get('/loantypes/{id}', [LoansController::class, 'user_loan_types']);
-        Route::post('/verify', [LoansController::class, 'verify']);
+        Route::get('/verify/{phone}', [LoansController::class, 'verify']);
         Route::post('/apply', [LoansController::class, 'store']);
         Route::post('/old', [LoansController::class, 'sample_store']);
         Route::post('/active', [LoansController::class, 'activeLoan']);

@@ -415,42 +415,40 @@ class LoansController extends Controller
     }
 
 
-    public function verify(Request $request)
+    public function verify(Request $request,$phone)
     {
-        $attr = $request->validate([
-            'phone' => 'required|string|max:255',
-        ]);
-        $customer = Customers::where('phone', $attr['phone'])->first();
+        
+        $customer = Customers::where('phone', $phone)->first();
         if ($customer) {
             if ($customer->blacklist) {
                 $message = "Welcome to SMP Eventures, Your credit profile is too low. please contact the administrator";
 
                 $data = ([
-                    'borrow' => 0,
+                    'borrow' => "0",
                     'message' => $message,
                     'limit' => $customer->loanlimit,
-                    'access_code' => 0
+                    'access_code' => "0"
                 ]);
                 return $this->successResponse("success", $data);
             } else {
 
                 $pending = Loans::where([
-                    'phone' => $attr['phone'],
+                    'phone' => $phone,
                     'loan_status' => 'pending'
                 ])->first();
                 if ($pending) {
                     $message = "You loan of " . $pending->principle . " is waiting approval please contact the administrator";
 
                     $data = ([
-                        'borrow' => 0,
+                        'borrow' => "0",
                         'message' => $message,
                         'limit' => $customer->loanlimit,
-                        'access_code' => 0
+                        'access_code' => "0"
                     ]);
                     return $this->successResponse("success", $data);
                 } else {
                     $unpaid = Loans::where([
-                        'phone' => $attr['phone'],
+                        'phone' => $phone,
                         'loan_status' => 'disbursed',
 
                     ])->first();
@@ -460,10 +458,10 @@ class LoansController extends Controller
 
 
                         $data = ([
-                            'borrow' => 0,
+                            'borrow' => "0",
                             'message' => $message,
                             'limit' => $customer->loanlimit,
-                            'access_code' => 0
+                            'access_code' => "0"
                         ]);
                         return $this->successResponse("success", $data);
                     } else {
@@ -472,10 +470,10 @@ class LoansController extends Controller
 
 
                             $data = ([
-                                'borrow' => 0,
+                                'borrow' => "0",
                                 'message' => $message,
                                 'limit' => $customer->loanlimit,
-                                'access_code' => 0
+                                'access_code' =>"0"
                             ]);
                             return $this->successResponse("success", $data);
                         } else {
@@ -483,20 +481,20 @@ class LoansController extends Controller
 
                             $access_code = $this->generateRandomString(12);
 
-                            $access = Verification::where('phone', $attr['phone'])->first();
+                            $access = Verification::where('phone', $phone)->first();
                             if ($access) {
                                 $access->access_code = $access_code;
                                 $access->save();
                             } else {
 
                                 $verified = new Verification();
-                                $verified->phone = $attr['phone'];
+                                $verified->phone = $phone;
                                 $verified->access_code = $access_code;
                                 $verified->save();
                             }
 
                             $data = ([
-                                'borrow' => 1,
+                                'borrow' => "1",
                                 'message' => $message,
                                 'limit' => $customer->loanlimit,
                                 'access_code' => $access_code
