@@ -69,7 +69,16 @@ class Loans extends Model
         ->count();
         return $loans;
     }
-     
+    public function getCreatedAtFormattedAttribute()
+    {
+        return $this->created_at->format('Y-m-d H:i:s'); // Adjust format as needed
+    }
+
+    // Custom accessor for updated_at in a specific format
+    public function getUpdatedAtFormattedAttribute()
+    {
+        return $this->updated_at->format('Y-m-d H:i:s'); // Adjust format as needed
+    }
      
     // protected $casts = [
     //     'disbursment_date' => 'date:Y-m-d',
