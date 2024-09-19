@@ -867,12 +867,10 @@ class LoansController extends Controller
             return $this->errorResponse("No Such Account Number");
         }
     }
-    public function activeLoan(Request $request)
+    public function activeLoan(Request $request,$phone)
     {
-        $attr = $request->validate([
-            'phone' => 'required|string|max:255',
-        ]);
-        $loans = Loans::where(['phone' => $attr['phone'], 'repayment_status' => false, 'loan_status' => 'disbursed'])->first();
+        
+        $loans = Loans::where(['phone' => $phone, 'repayment_status' => false, 'loan_status' => 'disbursed'])->first();
         if ($loans) {
 
             return $this->successResponse("success", $loans);
