@@ -506,7 +506,14 @@ class LoansController extends Controller
             }
         } else {
 
-            return $this->errorResponse("No Such Account Number");
+            $data = ([
+                'borrow' => "0",
+                'message' => "No Such Account Number",
+                'limit' => "0",
+                'access_code' => "0"
+            ]);
+            return $this->successResponse("success", $data);
+         
         }
     }
 
