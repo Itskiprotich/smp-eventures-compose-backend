@@ -15,4 +15,16 @@ class Schedule extends Model
         'amount',
         'balance'
     ];
+
+         //return human readable date for created_at
+   public function getCreatedAtAttribute($value)
+   {
+       return date('d-m-Y H:m:i', strtotime($value));
+   }
+
+   //return human readable date for updated_at
+   public function getUpdatedAtAttribute($value)
+   {
+       return date('d-m-Y H:m:i', strtotime($value));
+   }
 }
