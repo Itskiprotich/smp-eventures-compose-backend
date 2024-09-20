@@ -971,7 +971,7 @@ class LoansController extends Controller
 
         $result = (new IPayController)->make_payment($phone, $amount);
         $data = ([
-            'borrow' => 1,
+            'proceed' => "1",
             'result'=>$result,
             'message' => 'Payment successfull, Please wait for STK Push'
         ]);
