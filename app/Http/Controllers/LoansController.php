@@ -882,7 +882,7 @@ class LoansController extends Controller
         } else {
             $data = ([
                 'borrow' => "0",
-                'message' => 'No Such Loan Record',
+                'message' => 'You don\'t have any active loan currently, please proceed to Borrow',
                 'loan' => new \stdClass()
             ]); 
             return $this->successResponse("success", $data);
