@@ -1156,8 +1156,8 @@ class LoansController extends Controller
             ->first();
 
         if ($loan) {
-            $payments=array();
-            $schedule=array();
+            $payments=Repayments::where(['loan_ref' => $loan->loan_ref])->orderBy('created_at', 'desc')->get();
+            $schedule=Schedule::where(['loan_ref' => $loan->loan_ref])->orderBy('due_date', 'desc')->get();
             $data = ([
                 'proceed' => "1",
                 'message' => 'Loan detail successfully retrieved',
