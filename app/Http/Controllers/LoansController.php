@@ -25,7 +25,7 @@ use PhpOption\None;
 class LoansController extends Controller
 {
 
-    public function callbackDisbursement($trans_id,$branch_id)
+    public function callbackDisbursement($trans_id, $branch_id)
     {
         $callback_response = "Disbursement successfull";
         $trans_ref = "CONFIRMED";
@@ -94,7 +94,7 @@ class LoansController extends Controller
                     'narration' => $narration_over,
                     'loan_type' => "Suspense Account",
                     'payment_ref' => $trans_ref,
-                    'name' => $loan->customer_name, 
+                    'name' => $loan->customer_name,
                     'phone' => $loan->phone,
 
                 ]);
@@ -155,7 +155,7 @@ class LoansController extends Controller
         }
     }
 
-    public function handleAutomatic($loan_ref,$branch_id)
+    public function handleAutomatic($loan_ref, $branch_id)
     {
         $loan = Loans::where(['loan_ref' => $loan_ref])->first();
 
@@ -167,7 +167,7 @@ class LoansController extends Controller
             'phone' => $loan->phone,
 
         ]);
-        $this->callbackDisbursement($trans_id,$branch_id);
+        $this->callbackDisbursement($trans_id, $branch_id);
     }
 
     public function journal_b035_b020($loan_ref, $principle, $today, $narration, $transaction_code)
@@ -369,9 +369,7 @@ class LoansController extends Controller
         return $this->responseJson($message, 400, null, false);
     }
 
-    public function index()
-    {
-    }
+    public function index() {}
 
     public function user_loan_types(Request $request, $phone)
     {
@@ -415,9 +413,9 @@ class LoansController extends Controller
     }
 
 
-    public function verify(Request $request,$phone)
+    public function verify(Request $request, $phone)
     {
-        
+
         $customer = Customers::where('phone', $phone)->first();
         if ($customer) {
             if ($customer->blacklist) {
@@ -473,7 +471,7 @@ class LoansController extends Controller
                                 'borrow' => "0",
                                 'message' => $message,
                                 'limit' => $customer->loanlimit,
-                                'access_code' =>"0"
+                                'access_code' => "0"
                             ]);
                             return $this->successResponse("success", $data);
                         } else {
@@ -513,11 +511,10 @@ class LoansController extends Controller
                 'access_code' => "0"
             ]);
             return $this->successResponse("success", $data);
-         
         }
     }
 
-    public function store_manual_loans($customer, $phone, $loan_code, $principle, $disbursment_date,$branch_id)
+    public function store_manual_loans($customer, $phone, $loan_code, $principle, $disbursment_date, $branch_id)
     {
 
 
@@ -589,7 +586,7 @@ class LoansController extends Controller
                 'repayment_date' => $repayment_date,
                 'penalty_date' => $penalty_date,
                 'approved_by' => 'Auto',
-                'branch_id'=>$branch_id,
+                'branch_id' => $branch_id,
                 'actioned_by' => 'Auto',
 
             ]);
@@ -634,9 +631,9 @@ class LoansController extends Controller
 
         $customer = Customers::where('phone', $phone)->first();
         if ($customer) {
-            $branch_id=$customer->branch_id;
+            $branch_id = $customer->branch_id;
 
-            $data = $this->store_manual_loans($customer, $phone, $loan_code, $principle, $startdate,$branch_id);
+            $data = $this->store_manual_loans($customer, $phone, $loan_code, $principle, $startdate, $branch_id);
             return $this->successResponse("success", $data);
         } else {
             return $this->successResponse("success", "Customer Does not Exists");
@@ -705,7 +702,7 @@ class LoansController extends Controller
                         $data = ([
                             'borrow' => "0",
                             'message' => $message,
-                             'access_code' => "0"
+                            'access_code' => "0"
                         ]);
                         return $this->successResponse("success", $data);
                     } else {
@@ -830,14 +827,14 @@ class LoansController extends Controller
                                         $data = ([
                                             'borrow' => "1",
                                             'message' => "Loan Application successful",
-                                             'access_code' => "0"
+                                            'access_code' => "0"
                                         ]);
                                         return $this->successResponse("success", $data);
-                                    } else { 
+                                    } else {
                                         $data = ([
                                             'borrow' => "0",
                                             'message' => "Failed to Add Loan",
-                                             'access_code' => "0"
+                                            'access_code' => "0"
                                         ]);
                                     }
                                 } else {
@@ -845,7 +842,7 @@ class LoansController extends Controller
                                     $data = ([
                                         'borrow' => "0",
                                         'message' => "Invalid Loan Type",
-                                         'access_code' => "0"
+                                        'access_code' => "0"
                                     ]);
                                     return $this->successResponse("success", $data);
                                 }
@@ -854,7 +851,7 @@ class LoansController extends Controller
                                 $data = ([
                                     'borrow' => "0",
                                     'message' => "Invalid Verification Code",
-                                     'access_code' => "0"
+                                    'access_code' => "0"
                                 ]);
                                 return $this->successResponse("success", $data);
                             }
@@ -867,9 +864,9 @@ class LoansController extends Controller
             return $this->errorResponse("No Such Account Number");
         }
     }
-    public function activeLoan(Request $request,$phone)
+    public function activeLoan(Request $request, $phone)
     {
-        
+
         $loans = Loans::where(['phone' => $phone, 'repayment_status' => false, 'loan_status' => 'disbursed'])->first();
         if ($loans) {
             $data = ([
@@ -884,7 +881,7 @@ class LoansController extends Controller
                 'borrow' => "0",
                 'message' => 'You don\'t have any active loan currently, please proceed to Borrow',
                 'loan' => new \stdClass()
-            ]); 
+            ]);
             return $this->successResponse("success", $data);
         }
     }
@@ -962,7 +959,7 @@ class LoansController extends Controller
         $account = $phone;
         if ($request->has('account')) {
             $account = $request->account;
-        } 
+        }
         $reference = $this->generateRandomString(12);
         $mode = Mode::updateOrCreate(
             ['phone' =>  $phone],
@@ -972,7 +969,7 @@ class LoansController extends Controller
         $result = (new IPayController)->make_payment($phone, $amount);
         $data = ([
             'proceed' => "1",
-            'result'=>$result,
+            'result' => $result,
             'message' => 'Payment successfull, Please wait for STK Push'
         ]);
         return $this->successResponse("success", $data);
@@ -1043,7 +1040,7 @@ class LoansController extends Controller
                 $positive = $remainder * -1;
                 $body = "Loan Payment of KES {$amount}. current balance KES 0.00. Overpayment of KES {$positive}";
                 $message = "Thank your!! Your loan payment of KES.{$amount} has been received, your  overpayment amount of {$positive} will be deposited to savings. Thank your for using SMP Eventures";
-                $this->clear_overpayments_and_deposit_to_savings($loans->phone,$positive);
+                $this->clear_overpayments_and_deposit_to_savings($loans->phone, $positive);
             }
             $logs = SystemLogs::create([
                 'phone' => $loans->phone,
@@ -1062,7 +1059,7 @@ class LoansController extends Controller
         }
     }
 
-    public function clear_overpayments_and_deposit_to_savings($phone,$amount)
+    public function clear_overpayments_and_deposit_to_savings($phone, $amount)
     {
         $overpays = Overpayment::where(['phone' => $phone,])->get();
         foreach ($overpays as $over) {
@@ -1073,7 +1070,7 @@ class LoansController extends Controller
         $result = (new SavingsController)->savings_callback($phone, $amount, $reference, "hMazYj52pNsZ");
     }
     // Pay Loan Callback URL
-    public function pay_loan_callback($phone, $amount, $trans_code,$branch_id)
+    public function pay_loan_callback($phone, $amount, $trans_code, $branch_id)
     {
 
         $loans = Loans::where(['phone' => $phone, 'repayment_status' => false, 'loan_status' => 'disbursed'])->first();
@@ -1097,7 +1094,7 @@ class LoansController extends Controller
                     'initiator' => $phone,
                     'reference' => $reference,
                     'paid_amount' => $amount,
-                    'branch_id'=>$branch_id,
+                    'branch_id' => $branch_id,
                     'balance' => $remainder,
 
                 ]);
@@ -1113,7 +1110,7 @@ class LoansController extends Controller
                     'loan_ref' => $loans->loan_ref,
                     'date_paid' => $now,
                     'initiator' => $phone,
-                    'branch_id'=>$branch_id,
+                    'branch_id' => $branch_id,
                     'reference' => $reference,
                     'paid_amount' => $amount,
                     'balance' => 0,
@@ -1133,8 +1130,8 @@ class LoansController extends Controller
                 $positive = $remainder * -1;
                 $body = "Loan Payment of KES {$amount}. current balance KES 0.00. Overpayment of KES {$positive}";
                 $message = "Thank your!! Your loan payment of KES.{$amount} has been received, your  overpayment amount of {$positive} will be deposited to savings. Thank your for using SMP Eventures";
-               
-                $this->clear_overpayments_and_deposit_to_savings($loans->phone,$positive);
+
+                $this->clear_overpayments_and_deposit_to_savings($loans->phone, $positive);
             }
             $logs = SystemLogs::create([
                 'phone' => $loans->phone,
@@ -1153,13 +1150,28 @@ class LoansController extends Controller
         }
     }
 
-    public function view_single_loan(Request $request,$loan_ref){
-       return $loans = Loans::where(['loan_ref' => $loan_ref]) 
-            ->first();
-    }
-    public function viewLoans(Request $request,$phone)
+    public function view_single_loan(Request $request, $loan_ref)
     {
-         
+        $loan = Loans::where(['loan_ref' => $loan_ref])
+            ->first();
+
+        if ($loan) {
+            $data = ([
+                'proceed' => "1",
+                'message' => 'Loan detail successfully retrieved'
+            ]);
+            return $this->successResponse("success", $data);
+        } else {
+            $data = ([
+                'proceed' => "0",
+                'message' => 'Failed to retrieved loan detail'
+            ]);
+            return $this->successResponse("success", $data);
+        }
+    }
+    public function viewLoans(Request $request, $phone)
+    {
+
         $status = ['pending', 'disbursed', 'paid'];
         $loans = Loans::where(['phone' => $phone])
             ->whereIn('loan_status', $status)
