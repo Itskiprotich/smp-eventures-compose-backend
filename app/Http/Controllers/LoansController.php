@@ -1156,10 +1156,14 @@ class LoansController extends Controller
             ->first();
 
         if ($loan) {
+            $payments=array();
+            $schedule=array();
             $data = ([
                 'proceed' => "1",
                 'message' => 'Loan detail successfully retrieved',
-                'loan' => $loan
+                'loan' => $loan,
+                'schedule' =>$schedule,
+                'payments'=>$payments
             ]);
             return $this->successResponse("success", $data);
         } else {
