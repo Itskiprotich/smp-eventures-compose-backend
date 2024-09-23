@@ -1152,6 +1152,11 @@ class LoansController extends Controller
             return $this->errorResponse("No Such Loan Record");
         }
     }
+
+    public function view_single_loan(Request $request,$loan_ref){
+       return $loans = Loans::where(['loan_ref' => $loan_ref]) 
+            ->first();
+    }
     public function viewLoans(Request $request,$phone)
     {
          
