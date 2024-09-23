@@ -172,7 +172,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::get('/active/{id}', [LoansController::class, 'activeLoan']);
         Route::post('/active/web', [LoansController::class, 'active_web_loan']);
         Route::get('/history/{id}', [LoansController::class, 'viewLoans']);
-        Route::get('/history/single{id}', [LoansController::class, 'view_single_loan']);
+        Route::get('/history/single/{id}', [LoansController::class, 'view_single_loan']);
         Route::get('/schedule/{id}', [LoansController::class, 'schedule']);
         Route::get('/repayments/{id}', [LoansController::class, 'repayments']);
         Route::get('/reset_penalty', [LoansController::class, 'update_penalty_date']);
