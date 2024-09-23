@@ -1158,7 +1158,8 @@ class LoansController extends Controller
         if ($loan) {
             $data = ([
                 'proceed' => "1",
-                'message' => 'Loan detail successfully retrieved'
+                'message' => 'Loan detail successfully retrieved',
+                'loan' => $loan
             ]);
             return $this->successResponse("success", $data);
         } else {
