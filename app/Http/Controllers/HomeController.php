@@ -551,22 +551,22 @@ class HomeController extends Controller
     public function loans_repayments_monthly()
     {
 
-       
+
         $repayments = Repayments::selectRaw('YEAR(created_at) as year, MONTH(created_at) as month, SUM(paid_amount) as total_paid')
             ->groupBy('year', 'month')
-            ->orderBy('year','DESC')
-            ->orderBy('month','DESC')
+            ->orderBy('year', 'DESC')
+            ->orderBy('month', 'DESC')
             ->get();
 
-            $data=[];
+        $data = [];
         foreach ($repayments as $repayment) {
             $year = $repayment->year;
             $monthName = Carbon::createFromDate($year, $repayment->month, 1)->format('F'); // Get the full month name
             $totalPaid = $repayment->total_paid;
 
-            $data[]=array(
-                'month'=>"{$monthName} {$year}",
-                'amount'=>number_format($totalPaid, 0, '.', ',')
+            $data[] = array(
+                'month' => "{$monthName} {$year}",
+                'amount' => number_format($totalPaid, 0, '.', ',')
             );
             // echo "Year: $year, Month: $monthName, Total Paid: $totalPaid\n";
         }
@@ -813,8 +813,8 @@ class HomeController extends Controller
                     $randomString .= $characters[rand(0, $charactersLength - 1)];
                 }
                 $password = $randomString;
-                DB::connection('online_mysql')->beginTransaction(); 
-               $user= User::on('online_mysql')->updateOrCreate(
+                DB::connection('online_mysql')->beginTransaction();
+                $user = User::on('online_mysql')->updateOrCreate(
                     ['email' => $customer->email],
                     [
                         'name' => $name,
@@ -823,14 +823,14 @@ class HomeController extends Controller
                         'password' => Hash::make($password),
                     ]
                 );
-            
-                DB::connection('online_mysql')->commit(); 
+
+                DB::connection('online_mysql')->commit();
 
                 $customer->online_access = true;
                 $customer->save();
                 $message = "You have been granted access to the online version of SMP App, kindly use {$customer->email} and {$password} to Log on to the Jetpack Compose Web App. Access link https://web-smp.imeja.co.ke";
                 $result = (new EmailController)->online_access_email($customer, $message);
-// return $user;
+                // return $user;
                 return redirect()->to('/customer/view/' . $id)->with('success', "Online access granted! to {$name}");
             } catch (\Exception $e) {
                 DB::connection('online_mysql')->rollBack();
@@ -1262,12 +1262,23 @@ class HomeController extends Controller
 
     public function edit_loans($id)
     {
-        $all['all'] = Customers::all();
-        $data['data'] = Loans::where('loan_ref', $id)->first();
-        $schedules['schedules'] = Schedule::where('loan_ref', $id)->orderBy('created_at', 'desc')->get();
 
-        $guarantors['guarantors'] = Guarantor::join('customers', 'guarantors.guarantor', '=', 'customers.phone')->where(['guarantors.phone' => $id])->orderBy('guarantors.id', 'desc')->get(['guarantors.*', 'customers.firstname', 'customers.phone as phonenumber', 'customers.lastname']);
-        return view('loans.edit')->with($data)->with($schedules)->with($all)->with($guarantors);
+        $loan = Loans::where('loan_ref', $id)->first();
+        if (!$loan) {
+
+            return redirect()->to('/loans/edit/' . $id)->with('error', 'Faile to retrieve data');
+        }
+        $phone = $loan->phone;
+
+        $phones = array();
+        $phones[] = $phone;
+
+        $data['all'] = Customers::whereNotIn('phone', $phones)->orderBy('created_at', 'desc')->get();
+        $data['schedules'] = Schedule::where('loan_ref', $id)->orderBy('created_at', 'desc')->get();
+
+        $data['guarantors'] = Guarantor::join('customers', 'guarantors.guarantor', '=', 'customers.phone')->where(['guarantors.phone' => $id])->orderBy('guarantors.id', 'desc')->get(['guarantors.*', 'customers.firstname', 'customers.phone as phonenumber', 'customers.lastname']);
+        $data['data'] = $loan;
+        return view('loans.edit', $data);
     }
 
     public function assign_loan(Request $request, $id)
@@ -3857,8 +3868,10 @@ class HomeController extends Controller
         $st = Social::updateOrCreate(
             ['active' =>   true],
             [
-                'facebook' => $facebook, 'youtube' => $youtube,
-                'instagram' => $instagram, 'twitter' => $twitter,
+                'facebook' => $facebook,
+                'youtube' => $youtube,
+                'instagram' => $instagram,
+                'twitter' => $twitter,
 
             ]
         );
@@ -3892,7 +3905,13 @@ class HomeController extends Controller
             ['admin_email' => $email, 'code' => $code, 'days' => $days, 'saving_rate' => $saving_rate, 'system_rate' => $system_rate, 'developer_rate' => $developer_rate, 'investor_rate' => $investor_rate]
         );
         $payload = [
-            'admin_email' => $email, 'code' => $code, 'days' => $days, 'saving_rate' => $saving_rate, 'system_rate' => $system_rate, 'developer_rate' => $developer_rate, 'investor_rate' => $investor_rate
+            'admin_email' => $email,
+            'code' => $code,
+            'days' => $days,
+            'saving_rate' => $saving_rate,
+            'system_rate' => $system_rate,
+            'developer_rate' => $developer_rate,
+            'investor_rate' => $investor_rate
         ];
         // convert payload to 
         $user = Auth::user();
